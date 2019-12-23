@@ -109,8 +109,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					 	<h2>Success!!</h2>
 						<h3>{{ session['SuccessMessage'] }}</h3>
 						<h3><a href="?action=refresh">Refresh</a></h3>
-					 {% endif %}
-
+					{% elif session['firstName'] %}
+						{% block content %}{% endblock %}
+					  {% endif %}
 				 </div>
 			 </div>
         {% if session['accountID'] %}
