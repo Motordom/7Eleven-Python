@@ -65,11 +65,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				 <center>
                              <h2>Welcome {{ session['firstName'] }}</h2>
                              <h3>Your account balance is: <strong class='bold_balance'>${{ session['cardBalance'] }}</strong></h3>
+</Center>
 														 {% if session['fuelLockActive'][0] %}
                              <br><h4 class='bold_balance'>Current fuel lock</h4>
-                             <h3><strong class='bold_balance'>Expires: </strong>{{ session['fuelLockExpiry'] }}</h3>
-                             <h3>Litres: <strong class='bold_balance'>{{ session['fuelLockLitres'] }}</strong></h3>
-                             <h3>Price: <strong class='bold_balance'>{{ session['fuelLockCPL'] }}</strong></h3>
+                             <h3><strong class='bold_balance'>Expires</strong>: {{ session['fuelLockExpiry'] }}</h3>
+                             <h3><strong class='bold_balance'>Litres</strong>: {{ session['fuelLockLitres'] }}</h3>
+                             <h3><strong class='bold_balance'>Price</strong>: {{ session['fuelLockCPL'] }}</h3>
 														 {% endif %}
 														 {% if session['fuelLockActive'][1] %}
                              <br><h4 class='bold_balance'>Not currently locked in</h4>
@@ -79,7 +80,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                              <br><h4 class='bold_balance'>Previous fuel lock:</h4>
                              <h3>Redeemed: <strong class='bold_balance'>{{ session['fuelLockRedeemed'] }}</strong></h3>
 														 {% endif %}
-				 </center>
+				 
 					 </div>
                          <div class="clear"></div>
                      {% else %}
