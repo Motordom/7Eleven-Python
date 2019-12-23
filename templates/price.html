@@ -17,9 +17,7 @@
                 <button class="btn btn-default" name="submit" value="automatic" type="submit" onclick="loader.style.display = 'block'">Lock it in!</button>
             </div>
         </form>
-        <h5 id="57"> E10 cheapest price found was <strong class='bold_balance'>{{ session['price0'] }}</strong> at <strong class='bold_balance'>{{ session['postcode0'] }}</strong></h5>
         <h5 id="52"> U91 cheapest price found was <strong class='bold_balance'>{{ session['price1'] }}</strong> at <strong class='bold_balance'>{{ session['postcode1'] }}</strong></h5>
-        <h5 id="55"> U95 cheapest price found was <strong class='bold_balance'>{{ session['price2'] }}</strong> at <strong class='bold_balance'>{{ session['postcode2'] }}</strong></h5>
         <h5 id="56"> U98 cheapest price found was <strong class='bold_balance'>{{ session['price3'] }}</strong> at <strong class='bold_balance'>{{ session['postcode3'] }}</strong></h5>
         <h5 id="53"> Diesel cheapest price found was <strong class='bold_balance'>{{ session['price4'] }}</strong> at <strong class='bold_balance'>{{ session['postcode4'] }}</strong></h5>
         <h5 id="54"> LPG cheapest price found was <strong class='bold_balance'>{{ session['price5'] }}</strong> at <strong class='bold_balance'>{{ session['postcode5'] }}</strong></h5>
@@ -35,7 +33,7 @@
                   <option value="53">Diesel</option>
                   <option value="54">LPG</option>
 
-                </select><br>
+                </select><br><br>
                 Postcode of the fuel: <input class="form-control mr-sm-2" type="text" placeholder="3150" name="postcode"><br><br>
                 <button class="btn btn-default" name="submit" value="manual" type="submit" onclick="loader.style.display = 'block'">Lock it in!</button>
             </div>
