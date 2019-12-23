@@ -61,7 +61,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			 <div class="profile-top wthree">
 				 <div class="pic-sec">
                      {% if session['accountID'] %}
-                         <div class="pic_info">
+                         <div>
 				 <center>
                              <h2>Welcome, {{ session['firstName'] }}.</h2>
                              <h3>Your current account balance is: <strong class='bold_balance'>${{ session['cardBalance'] }}.</strong></h3>
@@ -109,8 +109,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					 	<h2>Success!!</h2>
 						<h3>{{ session['SuccessMessage'] }}</h3>
 						<h3><a href="?action=refresh">Refresh</a></h3>
-					 {% elif session['firstName'] %}
-							{% block content %}{% endblock %}
+					<!-- {% elif session['firstName'] %}
+							{% block content %}{% endblock %} -->
 					 {% endif %}
 
 				 </div>
