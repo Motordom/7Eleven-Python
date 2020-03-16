@@ -65,6 +65,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				 <center>
                              <h2>Welcome {{ session['firstName'] }}</h2>
                              <h3>Your account balance is: <strong class='bold_balance'>${{ session['cardBalance'] }}</strong></h3>
+					 <p id="balance"></p>
+
+<script>
+  var time = {{ session['cardBalance'] }};
+  if (time < 2000) {
+    document.getElementById("balance").innerHTML = "Good day";
+  }
+</script>
 </Center>
 														 {% if session['fuelLockActive'][0] %}
                              <br><h4 class='bold_balance'>Current fuel lock</h4>
