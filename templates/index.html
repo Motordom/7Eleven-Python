@@ -105,7 +105,8 @@ document.getElementById("fueltypeconverted").innerHTML = fueltype;
 														 {% if session['fuelLockActive'][0] %}
                              <br><h4 class='bold_balance'>Current fuel lock</h4>
                              <h3><strong class='bold_balance'>Expires</strong>: {{ session['fuelLockExpiry'] }}</h3>
-                             <h3><strong class='bold_balance'>Litres</strong>: You can lock in up to 150 litres of <strong><span id="fueltypeconverted"></span></strong></h3>
+			     <h3>You have <strong class='bold_balance'>150</strong> litres of <strong class='bold_balance'><span id="fueltypeconverted"></span></strong> locked in.</h3>
+                             <h3><strong class='bold_balance'>Litres</strong>: You can lock in up to 150 litres of <span id="fueltypeconverted"></span></h3>
                              <h3><strong class='bold_balance'>Price</strong>: {{ session['fuelLockCPL'] }}</h3>
 														 {% endif %}
 														 {% if session['fuelLockActive'][1] %}
