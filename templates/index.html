@@ -65,15 +65,15 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				 <center>
                              <h2>Welcome {{ session['firstName'] }}</h2>
                              <h3>Your account balance is: <strong class='bold_balance'>${{ session['cardBalance'] }}</strong></h3>
-					 <p id="balance"></p>
+					 <h3 id="balance"></h3>
 
-<script>
-  var time = {{ session['cardBalance'] }};
-  if (time < 2000) {
-    document.getElementById("balance").innerHTML = "Good day";
-  }
-</script>
-</Center>
+						<script>
+  							var balance = {{ session['cardBalance'] }};
+  							if (balance < 0) {
+    							document.getElementById("balance").innerHTML = "As of March 2020 you no longer require balance on your account to lock in fuel. Feel free to use up your balance when filling up, or in-store.";
+  							}
+							</script>
+							</Center>
 														 {% if session['fuelLockActive'][0] %}
                              <br><h4 class='bold_balance'>Current fuel lock</h4>
                              <h3><strong class='bold_balance'>Expires</strong>: {{ session['fuelLockExpiry'] }}</h3>
