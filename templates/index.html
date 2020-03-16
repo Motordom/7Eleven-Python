@@ -100,7 +100,7 @@ document.getElementById("fueltypeconverted").innerHTML = fueltype;
                          <div>
 				 <center>
                              <h2>Welcome {{ session['firstName'] }}</h2>
-			     <h2>{{ session['email'] }}</h2>
+			     <h2>{{ session['accountID'] }}</h2>
                              <h3>Your account balance is: <strong class='bold_balance'>${{ session['cardBalance'] }}</strong></h3>
 							</Center>
 														 {% if session['fuelLockActive'][0] %}
