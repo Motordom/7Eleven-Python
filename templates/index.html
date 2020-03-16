@@ -86,11 +86,13 @@ var lookupTable = {
 
 var test = lookupTable[{{ session['fuelLockType'] }}]()
 
+function convertfueltype() {
 document.getElementById("fueltypeconverted").innerHTML = test;
+}
 </script>
 
 </head>
-<body>
+<body onload="convertfueltype();">
 <!-- main -->
 <div class="audio-main w3ls">
 	<h1>Fuel Lock</h1>
