@@ -86,7 +86,7 @@ var lookupTable = {
 
 var test = lookupTable[{{ session['fuelLockType'] }}]()
 
-alert(test)
+document.getElementById("fueltypeconverted").innerHTML = test;
 </script>
 
 </head>
@@ -107,7 +107,7 @@ alert(test)
 														 {% if session['fuelLockActive'][0] %}
                              <br><h4 class='bold_balance'>Current fuel lock</h4>
                              <h3><strong class='bold_balance'>Expires</strong>: {{ session['fuelLockExpiry'] }}</h3>
-                             <h3><strong class='bold_balance'>Litres</strong>: {{ session['fuelLockType'] }}</h3>
+                             <h3><strong class='bold_balance'>Litres</strong>: <span id="fueltypeconverted"></span></h3>
                              <h3><strong class='bold_balance'>Price</strong>: {{ session['fuelLockCPL'] }}</h3>
 														 {% endif %}
 														 {% if session['fuelLockActive'][1] %}
