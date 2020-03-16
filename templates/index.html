@@ -57,6 +57,37 @@ License URL: http://creativecommons.org/licenses/by/3.0/
   alert("As of March 2020 you no longer require balance on your account to lock in fuel. Feel free to use up your balance when filling up, or in-store.");
   }
 </script>
+	
+<script>
+var lookupTable = {
+  52: function() {
+    return "Special Unleaded";
+  },
+  53: function() {
+    return "Special Diesel";
+  },
+  54: function() {
+    return "Autogas";
+  },
+  55: function() {
+    return "Extra 95";
+  },
+  56: function() {
+    return "Supreme+ 98";
+  },
+  57: function() {
+    return "Special E10";
+  }
+};
+
+
+
+
+
+var test = lookupTable[{{ session['fuelLockType'] }}]()
+
+alert(test)
+</script>
 
 </head>
 <body>
