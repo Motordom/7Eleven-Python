@@ -50,6 +50,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		 });
 	});
 </script>
+	
+<script>
+  var balance = {{ session['cardBalance'] }};
+  if (balance > 0) {
+  alert("As of March 2020 you no longer require balance on your account to lock in fuel. Feel free to use up your balance when filling up, or in-store.");
+  }
+</script>
 
 </head>
 <body>
@@ -65,14 +72,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				 <center>
                              <h2>Welcome {{ session['firstName'] }}</h2>
                              <h3>Your account balance is: <strong class='bold_balance'>${{ session['cardBalance'] }}</strong></h3>
-					 <h3 id="balance"></h3>
-
-						<script>
-  							var balance = {{ session['cardBalance'] }};
-  							if (balance > 0) {
-    							alert("As of March 2020 you no longer require balance on your account to lock in fuel. Feel free to use up your balance when filling up, or in-store.");
-  							}
-							</script>
 							</Center>
 														 {% if session['fuelLockActive'][0] %}
                              <br><h4 class='bold_balance'>Current fuel lock</h4>
@@ -95,7 +94,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                          <div>
 				 <center>
 														 <form class="form-inline mt-2 mt-md-0" action="/login" method="POST">
-															 <input class="form-control mr-sm-2" type="username" placeholder="Email" name="email"><br><br>
+															 <input class="form-control mr-sm-2" type="text" placeholder="Email" name="email"><br><br>
 															 <input class="form-control mr-sm-2" type="password" placeholder="Password"  name="password"><br><br>
 															 <input class="form-control mr-sm-2" type="text" placeholder="Device ID (can be blank)" value="{{ device_id }}" maxlength="16"  name="device_id"><br><br>
 															 <button class="btn btn-lg btn-primary" type="submit" value="Login">Login</button>
