@@ -69,8 +69,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 						<script>
   							var balance = {{ session['cardBalance'] }};
-  							if (balance < 0) {
-    							document.getElementById("balance").innerHTML = "As of March 2020 you no longer require balance on your account to lock in fuel. Feel free to use up your balance when filling up, or in-store.";
+  							if (balance > 0) {
+    							alert("As of March 2020 you no longer require balance on your account to lock in fuel. Feel free to use up your balance when filling up, or in-store.");
   							}
 							</script>
 							</Center>
